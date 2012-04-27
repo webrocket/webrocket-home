@@ -74,7 +74,7 @@ td { vertical-align: top; }
 
 body {
    font-size: 16px;
-   background: #222;
+   background: #222 url(../img/vintage_speckles.png) repeat;
 }
 
 .vessel {
@@ -190,16 +190,16 @@ body {
    text-shadow: 2px 2px 0 rgba(0,0,0,.8);
 }
 #information .first {
-   background: #52cec3;
+   background: #52cec3 url(../img/green_dust_scratch.png) repeat;
    color: #222;
    text-shadow: 1px 1px 0 rgba(255,255,255,.6);
 }
 #information .second {
-   background: #62ded3;
+   background: #62ded3 url(../img/green_dust_scratch.png) repeat;
    color: #222;
 }
 #information .third {
-   background: #72eee3;
+   background: #72eee3 url(../img/green_dust_scratch.png) repeat;;
 }
 #information .fourth {
    background: #555;
