@@ -397,7 +397,7 @@ body {
 }
 #twitter_update_list li {
    padding: 10px;
-   background: rgba(255,255,255,.1);
+   background: #1a1a1a;
    margin: .5em 0;
    -moz-border-radius: 3px 3px 3px 3px;
    position: relative;
@@ -653,13 +653,13 @@ body.download .download-link a {
    #twitter_updates .timeline {
       display: block;
       margin: 0 auto;
-      background: rgba(255,255,255,.03);
-      width: 4px;
+      background: #131313;
+      width: 3px;
       height: 500px;
    }
    #twitter_update_list {
       position: absolute;
-      top: 32px;
+      top: 50px;
    }
    #twitter_update_list li {
       margin: -2.5em 0;
@@ -684,7 +684,7 @@ body.download .download-link a {
    #twitter_update_list li:nth-child(even):before {
       border-right-width: 1em;
       border-right-style: solid;
-      border-right-color: rgba(255,255,255,.1);
+      border-right-color: #1a1a1a;
       margin-left: -25px;
       float: left;
    }
@@ -694,7 +694,7 @@ body.download .download-link a {
    #twitter_update_list li:nth-child(odd):before {
       border-left-width: 1em;
       border-left-style: solid;
-      border-left-color: rgba(255,255,255,.1);
+      border-left-color: #1a1a1a;
       float: right;
       margin-right: -25px;
    }
