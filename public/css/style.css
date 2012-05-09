@@ -590,6 +590,10 @@ body.download .download-link a {
       padding-top: 138px;
       margin-top: -145px;
    }
+   [role='contentinfo'] .mountains {
+      background: url(/img/mountains.png) center 70px repeat-x;
+      background-size: 733px 69px;
+   }
    #foot-nav {
       padding-top: 15px;
    }
@@ -712,6 +716,11 @@ body.download .download-link a {
       background-size: 933px 153px;
       padding-top: 153px;
       margin-top: -160px;
+   }
+   [role='contentinfo'] .mountains {
+      background: url(/img/mountains.png) center 78px repeat-x;
+      background-size: 815px 77px;
+      background-position: center 78px;
    }
 }
 

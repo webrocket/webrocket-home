@@ -52,31 +52,33 @@
 
     <div id="footer-wrap">
       <footer role="contentinfo">
-        <div class="vessel">
-          <nav id="foot-nav">
-            <ul>
-              <li class="tour-related"><a href="http://tour.webrocket.io/#1">Tour</a></li>
-              <li><a href="/docs/">Docs</a></li>
-              <li><a href="/faq/">FAQ</a></li>
-              <li><a href="/code/">Code</a></li>
-              <li><a href="#">Support</a></li>
-              <li><a href="#">Crew</a></li>
-              <li><a href="#">Press</a></li>
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-          <p class="copy">
-            Copyright &copy; 2011 by <a href="http://nu7hat.ch">nu7</a>
-            and folks at <a href="http://cuboxlabs.com">Cubox</a>.<br/>
-            <small>All rights reserved.</small>
-          </p>
-          <% if @page == 'index' %>
+        <div class="mountains">
+          <div class="vessel">
+            <nav id="foot-nav">
+              <ul>
+                <li class="tour-related"><a href="http://tour.webrocket.io/#1">Tour</a></li>
+                <li><a href="/docs/">Docs</a></li>
+                <li><a href="/faq/">FAQ</a></li>
+                <li><a href="/code/">Code</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Crew</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+            <p class="copy">
+              Copyright &copy; 2011 by <a href="http://nu7hat.ch">nu7</a>
+              and folks at <a href="http://cuboxlabs.com">Cubox</a>.<br/>
+              <small>All rights reserved.</small>
+            </p>
+            <% if @page == 'index' %>
             <div id="twitter_updates">
               <div class="timeline"></div>
               <ul id="twitter_update_list"></ul>
             </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
       </footer>
     </div>
