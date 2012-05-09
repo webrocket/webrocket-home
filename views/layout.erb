@@ -3,13 +3,23 @@
   <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
 	<title>WebRocket - Distributed Web Broker for masses!</title>
-	<meta name="description" content="">
+
+    <meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="/css/webfonts.css">
+
+    <link rel="stylesheet" href="/css/webfonts.css">
 	<link rel="stylesheet" href="/css/style.css">
-	<script src="/js/libs/modernizr-2.5.3.min.js"></script>
+
+    <script src="/js/libs/modernizr-2.5.3.min.js"></script>
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
   </head>
   <body class='<%= @page %> <%= @classes %>'>
     <div id="header-wrap">
@@ -61,17 +71,22 @@
             and folks at <a href="http://cuboxlabs.com">Cubox</a>.<br/>
             <small>All rights reserved.</small>
           </p>
+          <% if @page == 'index' %>
+            <div id="twitter_updates">
+              <div class="timeline"></div>
+              <ul id="twitter_update_list"></ul>
+            </div>
+          <% end %>
         </div>
       </footer>
     </div>
 
     <script src="/js/libs/jquery-1.7.2.min.js"></script>
     <script src="/js/scripts.js"></script>
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+
+    <% if @page == 'index' %>
+      <script src="http://twitter.com/javascripts/blogger.js"></script>
+      <script src="http://twitter.com/statuses/user_timeline/webrocketio.json?callback=twitterCallback2&count=6"></script>
+    <% end %>
   </body>
 </html>

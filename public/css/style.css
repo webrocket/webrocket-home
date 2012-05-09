@@ -189,12 +189,6 @@ body {
    color: #FFF;
 }
 
-.tour-related {
-   display: none;
-}
-
-#clouds {
-}
 #banner h2.slogan {
    text-shadow: 2px 2px 0 rgba(0,0,0,.8);
    font-family: Oyster;
@@ -208,11 +202,10 @@ body {
    text-align: center;
 }
 
-#clouds {
-}
 
 #information {
    background: #FFF;
+   margin-top: -2.5em;
 }
 #information article {
    font-size: 1.1em;
@@ -328,6 +321,100 @@ body {
    text-shadow: none;
 }
 
+#banner .take-a-tour a {
+   display: block;
+   text-align: center;
+   margin: 1em auto;
+   padding: .2em 0;
+   background: #72eee3;
+   color: #222;
+   font-family: Oyster;
+   font-weight: bold;
+   text-decoration: none;
+   font-size: 2em;
+   text-shadow: 1px 1px 0 rgba(255,255,255,.7);
+   -moz-border-radius: 3px;
+   box-shadow: 2px 2px 6px rgba(0,0,0,.5);
+   border-bottom: 1px solid #92FFF3;
+   border-right: 1px solid #92FFF3;
+   max-width: 480px;
+}
+#banner .take-a-tour a:hover {
+   background: #82F2F7;
+}
+#banner .take-a-tour a:active {
+   background: #52cec3;
+   position: relative;
+   top: 2px;
+   box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+}
+#banner .take-a-tour p {
+   color: #666;
+   text-shadow: 1px 1px 0 rgba(0,0,0,.7);
+   text-align: center;
+}
+
+#banner {
+   padding-bottom: 120px;
+}
+
+#clouds {
+   height: 120px;
+   margin-top: -90px;
+}
+#clouds div {
+   position: absolute;
+   width: 100%;
+   height: 120px;
+   background: url(/img/trans-0.png) bottom left repeat-x;
+}
+#clouds .first {
+   background-position: center 0px;
+   opacity: .3;
+}
+#clouds .second {
+   background-position: right 30px;
+   opacity: .6;
+}
+#clouds .third {
+   background-position: left 50px;
+}
+
+#twitter_updates {
+   position: relative;
+   margin-top: 40px;
+   height: auto;
+}
+#twitter_updates .timeline {
+   display: none;
+}
+#twitter_update_list {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   text-align: left;
+   width: 100%;
+}
+#twitter_update_list li {
+   padding: 10px;
+   background: rgba(255,255,255,.1);
+   margin: .5em 0;
+   -moz-border-radius: 3px 3px 3px 3px;
+   position: relative;
+}
+#twitter_update_list li span {
+   display: block;
+   color: #CCC;
+   margin: 0 0 .5em 0;
+   padding: 0;
+}
+#twitter_update_list li a {
+   display: inline-block;
+   color: #72eee3;
+}
+#twitter_update_list li a:hover {
+   color: #fff;
+}
 
 /* =============================================================================
    Pages related content
@@ -452,99 +539,9 @@ body.download .download-link a {
       background: none;
       text-decoration: underline;
    }
-   #banner .take-a-tour a {
-      display: block;
-      text-align: center;
-      margin: 1em auto;
-      padding: .2em 0;
-      background: #72eee3;
-      color: #222;
-      font-family: Oyster;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 2em;
-      text-shadow: 1px 1px 0 rgba(255,255,255,.7);
-      -moz-border-radius: 3px;
-      box-shadow: 2px 2px 6px rgba(0,0,0,.5);
-      border-bottom: 1px solid #92FFF3;
-      border-right: 1px solid #92FFF3;
-   }
-   #banner .take-a-tour a:hover {
-      background: #82F2F7;
-   }
-   #banner .take-a-tour a:active {
-      background: #52cec3;
-      position: relative;
-      top: 2px;
-      box-shadow: 1px 1px 4px rgba(0,0,0,.4);
-   }
 }
 
 @media only screen and (min-width: 720px) {
-   #clouds-nav a {
-      display: block;
-      font-family: Oyster;
-      color: #111;
-      text-align: center;
-      font-weight: bold;
-      font-size: 40px;
-      text-transform: uppercase;
-      font-style: none;
-      text-decoration: none;
-      position: absolute;
-   }
-   #clouds-nav .download a {
-      background: url(/img/cloud-download.png) center center no-repeat;
-      height: 119px;
-      width: 209px;
-      line-height: 115px;
-      left: 46%;
-      top: -15px;
-   }
-   #clouds-nav .cloud a {
-      background: url(/img/cloud-cloud.png) center center no-repeat;
-      height: 89px;
-      width: 144px;
-      line-height: 85px;
-      left: 28%;
-      top: -20px;
-      font-size: 28px;
-   }
-   #clouds-nav .fork a {
-      background: url(/img/cloud-code.png) center center no-repeat;
-      height: 74px;
-      width: 118px;
-      line-height: 72px;
-      left: 70%;
-      top: 12px;
-      font-size: 26px;
-   }
-   #clouds {
-      position: absolute;
-      width: 100%;
-      height: 100px;
-      margin-top: -100px;
-   }
-   #clouds div {
-      position: absolute;
-      width: 100%;
-      height: 120px;
-      background: url(/img/trans-0.png) bottom left repeat-x;
-   }
-   #clouds .first {
-      background-position: center 0px;
-      opacity: .3;
-   }
-   #clouds .second {
-      background-position: right 30px;
-      opacity: .6;
-   }
-   #clouds .third {
-      background-position: left 60px;
-   }
-   #banner {
-      padding-bottom: 120px;
-   }
    #banner .vessel {
       background: url(/img/illustration.png) left 60px no-repeat;
    }
@@ -559,8 +556,7 @@ body.download .download-link a {
       text-align: left;
    }
    #banner .take-a-tour p {
-      color: #666;
-      text-shadow: 1px 1px 0 rgba(0,0,0,.7);
+      text-align: left;
    }
    .tour-related {
       display: inherit;
@@ -578,16 +574,21 @@ body.download .download-link a {
       padding-right: 160px;
    }
    #information .first {
-      padding-top: 50px;
+      padding-top: 20px;
    }
    #footer-wrap {
       background: #72eee3 url(/img/green_dust_scratch.png) repeat;
       padding-top: 220px;
    }
+   [role='contentinfo'] {
+      box-shadow: inset 0 50px 50px #0c0c0c;
+      background: #0c0c0c url(/img/cartographer.png) repeat;
+   }
    [role='contentinfo'] .vessel {
       background: url(/img/footer.png) top center no-repeat;
-      padding-top: 153px;
-      margin-top: -156px;
+      background-size: 840px 138px; 
+      padding-top: 138px;
+      margin-top: -145px;
    }
    #foot-nav {
       padding-top: 15px;
@@ -645,6 +646,58 @@ body.download .download-link a {
    #docs article {
       padding: 0 1em;
    }
+   #twitter_updates {
+      overflow: hidden;
+      height: 350px;
+   }
+   #twitter_updates .timeline {
+      display: block;
+      margin: 0 auto;
+      background: rgba(255,255,255,.03);
+      width: 4px;
+      height: 500px;
+   }
+   #twitter_update_list {
+      position: absolute;
+      top: 32px;
+   }
+   #twitter_update_list li {
+      margin: -2.5em 0;
+   }
+   #twitter_update_list li:before {
+      content: "";
+      border-style: dashed;
+      border-color: transparent;
+      border-width: 0.53em;
+      display: -moz-inline-box;
+      display: inline-block;
+      font-size: 10px;
+      height: 0;
+      line-height: 0;
+      position: relative;
+      vertical-align: middle;
+      width: 0;
+   }
+   #twitter_update_list li:nth-child(even) {
+      margin-left: 52%;
+   }
+   #twitter_update_list li:nth-child(even):before {
+      border-right-width: 1em;
+      border-right-style: solid;
+      border-right-color: rgba(255,255,255,.1);
+      margin-left: -25px;
+      float: left;
+   }
+   #twitter_update_list li:nth-child(odd) {
+      margin-right: 52%;
+   }
+   #twitter_update_list li:nth-child(odd):before {
+      border-left-width: 1em;
+      border-left-style: solid;
+      border-left-color: rgba(255,255,255,.1);
+      float: right;
+      margin-right: -25px;
+   }
 }
 
 @media only screen and (min-width: 960px) {
@@ -654,6 +707,11 @@ body.download .download-link a {
    #main-nav ul li a {
       font-size: 1.8em;
       margin-left: 1em;
+   }
+   [role='contentinfo'] .vessel {
+      background-size: 933px 153px;
+      padding-top: 153px;
+      margin-top: -160px;
    }
 }
 
@@ -688,18 +746,18 @@ body.download .download-link a {
 /* =============================================================================
    Print Styles
    ========================================================================== */
- 
+
 @media print {
-  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-  a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
+   * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+   a, a:visited { text-decoration: underline; }
+   a[href]:after { content: " (" attr(href) ")"; }
+   abbr[title]:after { content: " (" attr(title) ")"; }
+   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+   thead { display: table-header-group; } /* h5bp.com/t */
+   tr, img { page-break-inside: avoid; }
+   img { max-width: 100% !important; }
+   @page { margin: 0.5cm; }
+   p, h2, h3 { orphans: 3; widows: 3; }
+   h2, h3 { page-break-after: avoid; }
 }
