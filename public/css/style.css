@@ -14,9 +14,9 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+a { color: #222; text-decoration: none; }
+a:visited { }
+a:hover { color: #000; text-shadow: none;  }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
 
@@ -74,7 +74,8 @@ td { vertical-align: top; }
 
 body {
    font-size: 16px;
-   background: #222 url(../img/vintage_speckles.png) repeat;
+   background: #0c0c0c url(../img/vintage_speckles.png) repeat;
+   overflow-y: scroll;
 }
 
 .vessel {
@@ -89,28 +90,35 @@ body {
    color: #CCC;
 }
 #header {
-   background: #000;
+   display: block;
+}
+#header-wrap {
+   box-shadow: 0 1px 7px rgba(0,0,0,.8);
+   border-bottom: 1px dashed #333;
+   border-top: 1px dashed #333;
+   margin-top: 10px;
+   background: #0d0d0d url(/img/classy_fabric.png) top left repeat;
    padding: 1px 0;
    padding-bottom: .4em;
    position: relative;
-   box-shadow: 0 3px 5px rgba(0,0,0,.5);
-   border-bottom: 1px solid #222;
 }
 #logo {
-   margin: .5em 0 0 0;
+   margin: .15em 0 0 0;
    padding: 0;
+   position: relative;
 }
 #logo a {
    text-transform: uppercase;
-   display: block;
+   display: inline-block;
    text-decoration: none;
    font-weight: normal;
    color: #FFF;
    background-position: left center;
    background-repeat: no-repeat;
-   background-image: url(../img/webrocket-logo.png);
-   background-size: 185px 80px;
-   height: 80px;
+   background-image: url(/img/webrocket-logo.png);
+   background-size: 170px 72px;
+   height: 72px;
+   width: 170px;
    text-align: left;
    text-indent: -9999px;
    outline: none;
@@ -118,10 +126,13 @@ body {
 
 #main-nav ul {
    list-style-type: none;
-   margin: 1em 0 0 0;
+   margin: 1.1em 0 1.6em 0;
    text-align: center;
-   border-top: dashed 1px #333;
+   border-bottom: solid 1px #1a1a1a;
+   border-top: solid 1px #000;
    display: none;
+   z-index: 9999;
+   position: relative;
 }
 #main-nav ul li {
    text-transform: uppercase;
@@ -129,15 +140,35 @@ body {
 #main-nav ul li a {
    text-decoration: none;
    display: block;
-   padding: .7em 0;
+   padding: .4em 0;
    outline: none;
-   color: #888;
-   border-bottom: dashed 1px #333;
+   color: #AAA;
+   font-size: 1.5em;
+   font-family: Oyster;
+   border-top: solid 1px #1a1a1a;
+   border-bottom: solid 1px #000;
+   text-shadow: -1px -1px 0 rgba(0,0,0,.5);
 }
 #main-nav ul li a:hover {
    background: #111;
    color: #FFF;
+   text-shadow: none;
 }
+/*
+#main-nav ul li.cloud-link a {
+   padding: 0 10px;
+   background: #72eee3;
+   color: #222;
+   text-shadow: 1px 1px 0 rgba(255,255,255,.9);
+   border-bottom: 1px solid #92FFF3;
+   border-right: 1px solid #92FFF3;
+   -moz-border-radius: 3px;
+}
+#main-nav ul li.cloud-link a:hover {
+   background: #82F2F7;
+   color: #000;
+}
+*/
 #toggle-menu {
    text-transform: uppercase;
    color: #888;
@@ -145,8 +176,14 @@ body {
    outline: none;
    position: absolute;
    right: 1em;
-   bottom: 2.1em;
+   bottom: 17px;
+   font-size: 1.8em;
+   font-family: Oyster;
    vertical-align: middle;
+   z-index: 9999;
+}
+#toggle-menu small {
+   color: rgba(255,255,255,.1);
 }
 #toggle-menu:hover {
    color: #FFF;
@@ -156,7 +193,7 @@ body {
    display: none;
 }
 
-#banner {
+#clouds {
 }
 #banner h2.slogan {
    text-shadow: 2px 2px 0 rgba(0,0,0,.8);
@@ -190,16 +227,22 @@ body {
    text-shadow: 2px 2px 0 rgba(0,0,0,.8);
 }
 #information .first {
-   background: #52cec3 url(../img/green_dust_scratch.png) repeat;
+   background: #52cec3 url(/img/green_dust_scratch.png) repeat;
    color: #222;
    text-shadow: 1px 1px 0 rgba(255,255,255,.6);
 }
+#information .first .trans {
+   background: url(/img/trans-1.png) bottom left repeat-x;
+}
 #information .second {
-   background: #62ded3 url(../img/green_dust_scratch.png) repeat;
+   background: #62ded3 url(/img/green_dust_scratch.png) repeat;
    color: #222;
 }
+#information .second .trans {
+   background: url(/img/trans-2.png) bottom right repeat-x;
+}
 #information .third {
-   background: #72eee3 url(../img/green_dust_scratch.png) repeat;;
+   background: #72eee3 url(/img/green_dust_scratch.png) repeat;;
 }
 #information .fourth {
    background: #555;
@@ -211,19 +254,21 @@ body {
    font-size: 1.1em;
    margin: .2em 0 2em 0;
    text-shadow: none;
-   border-top: 1px dashed #444;
+   border-bottom: solid 1px #1a1a1a;
+   border-top: solid 1px #000;
 }
 #foot-nav a {
-   color: #CCC;
+   color: #AAA;
    text-decoration: none;
    display: block;
    padding: .4em 0;
-   border-bottom: 1px dashed #444;
+   border-top: solid 1px #1a1a1a;
+   border-bottom: solid 1px #000;
    outine: none;
 }
 #foot-nav a:hover {
    color: #FFF;
-   background: #333;
+   background: #111;
 }
 #foot-nav .box {
    width: 50%;
@@ -236,7 +281,7 @@ body {
 }
 
 [role='contentinfo'] {
-   background: #222;
+   background: #0c0c0c;
    color: #999;
    font-size: .8em;
    padding: 1em 0 3em 0;
@@ -250,7 +295,116 @@ body {
    color: #FFF;
 }
 
+.content {
+   margin-top: -18px;
+   padding-top: 1.5em;
+}
+.content .vessel {
+   padding: 1.5em;
+   background: #FFF url(/img/ice_age.png) top left repeat;
+}
+.content h2 {
+   font-size: 2.4em;
+   font-family: Oyster;
+   font-weight: bold;
+   color: #000;
+   border-bottom: 1px dashed rgba(0,0,0,.2);
+   margin-bottom: 1.2em;
+   margin-top: 0;
+}
+.content h3 {
+   font-family: Oyster;
+   font-size: 2.1em;
+   font-weight: normal;
+   line-height: 1em;
+}
+.content p {
+   color: #555;
+}
+.content a {
+   text-shadow: 1px 1px 0 #72eee3;
+}
+.content a:hover {
+   text-shadow: none;
+}
 
+
+/* =============================================================================
+   Pages related content
+   ========================================================================== */
+
+body.white {
+   background: #62ded3 url(/img/green_dust_scratch.png) repeat;
+}
+body.white [role='main'] .trans {
+   height: 5px;
+}
+body.white #header-wrap {
+   box-shadow: none;
+   border: 0;
+   padding: 5px 0;
+   margin-top: 5px;
+}
+body.white #header {
+   border-top: 1px dashed #555;
+   border-bottom: 1px dashed #555;
+}
+
+body #logo .section {
+   display: inline-block;
+   font-family: Oyster;
+   width: auto;
+   height: auto;
+   color: #72eee3;
+   font-weight: normal;
+   font-size: 43px;
+   position: absolute;
+   text-transform: uppercase;
+}
+
+body.docs .docs-link a,
+body.faq .faq-link a,
+body.download .download-link a {
+   color: #72eee3 !important;
+}
+
+#faq ul {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+}
+
+#get-the-code ul#github-repos {
+   text-decoration: none;
+   list-style-type: none;
+   padding: 0;
+   margin: 2em 0;
+}
+#get-the-code ul#github-repos a {
+   font-size: 1.2em;
+}
+#get-the-code ul#github-repos .descr {
+   font-size: .9em;
+   margin-top: .2em;
+   margin-bottom: 1.5em;
+}
+
+.nobullets {
+   list-style-type: none;
+   padding: 0;
+}
+.nobullets li {
+   margin: .3em 0;
+}
+
+.clients li {
+}
+.clients li > a {
+   float: left;
+}
+.clients li > small {
+   float: right;
+}
 
 /* =============================================================================
    Media Queries
@@ -263,30 +417,35 @@ body {
    #toggle-menu {
       display: none;
    }
+   #header {
+   }
    #main-nav ul {
+      opacity: 1;
       display: block;
-      border-top: 0;
+      border: 0;
       float: right;
+      margin-top: .6em;
+      margin-bottom: 0;
    }
    #main-nav ul li {
       display: inline-block;
    }
    #main-nav ul li a {
-      border-bottom: 0;
-      margin-left: 1em;
+      border: 0;
+      margin-left: .9em;
    }
    #main-nav ul li a:hover {
       background: none;
    }
    #foot-nav {
-      border-top: none;
+      border: none;
       margin-top: 1em;
    }
    #foot-nav li {
       display: inline-block;
    }
    #foot-nav li a {
-      border-bottom: none;
+      border: none;
       padding: 0 .4em;
    }
    #foot-nav li a:hover {
@@ -322,6 +481,57 @@ body {
 }
 
 @media only screen and (min-width: 720px) {
+   #clouds-nav a {
+      display: block;
+      font-family: Oyster;
+      color: #111;
+      text-align: center;
+      font-weight: bold;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-style: none;
+      text-decoration: none;
+      position: absolute;
+   }
+   #clouds-nav .download a {
+      background: url(/img/cloud-download.png) center center no-repeat;
+      height: 119px;
+      width: 209px;
+      line-height: 115px;
+      left: 46%;
+      top: -15px;
+   }
+   #clouds-nav .cloud a {
+      background: url(/img/cloud-cloud.png) center center no-repeat;
+      height: 89px;
+      width: 144px;
+      line-height: 85px;
+      left: 28%;
+      top: -20px;
+      font-size: 28px;
+   }
+   #clouds-nav .fork a {
+      background: url(/img/cloud-code.png) center center no-repeat;
+      height: 74px;
+      width: 118px;
+      line-height: 72px;
+      left: 70%;
+      top: 12px;
+      font-size: 26px;
+   }
+   #clouds {
+      background: url(/img/trans-dark.png) bottom center no-repeat;
+      position: absolute;
+      width: 100%;
+      height: 126px;
+      margin-top: -70px;
+   }
+   #banner {
+      padding-bottom: 100px;
+   }
+   #banner .vessel {
+      background: url(/img/illustration.png) left 60px no-repeat;
+   }
    #banner #banner-text {
       width: 50%;
       float: right;
@@ -340,22 +550,94 @@ body {
       display: inherit;
    }
    #real-time-web-for-masses .in {
-      background: url(../img/rocket-1.png) 0px 0px no-repeat; 
+      background: url(/img/rocket-1.png) 0px 0px no-repeat; 
       padding-left: 180px;
    }
    #open-source-platform .in {
-      background: url(../img/satelite.png) 0px center no-repeat;
+      background: url(/img/satelite.png) 0px center no-repeat;
       padding-left: 210px;
    }
    #no-language-barrier .in {
-      background: url(../img/alien.png) 97% 100% no-repeat;
+      background: url(/img/alien.png) 97% 100% no-repeat;
       padding-right: 160px;
+   }
+   #information .first {
+      padding-top: 50px;
+   }
+   #footer-wrap {
+      background: #72eee3 url(/img/green_dust_scratch.png) repeat;
+      padding-top: 220px;
+   }
+   [role='contentinfo'] .vessel {
+      background: url(/img/footer.png) top center no-repeat;
+      padding-top: 153px;
+      margin-top: -156px;
+   }
+   #foot-nav {
+      padding-top: 15px;
+   }
+   .content .vessel {
+      box-shadow: 5px 5px 0 rgba(255,255,255,.5);
+   }
+   body.white [role='main'] .trans {
+      height: 80px;
+      background: url(/img/trans-2.png) bottom right repeat-x;
+   }
+   #download-server {
+      float: left;
+      width: 49%;
+   }
+   #download-client {
+      float: right;
+      width: 49%;
+   }
+   #docs {
+      position: relative;
+   }
+   #docs #nav-bg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 25%;
+      background: #72eee3 url(/img/green_dust_scratch.png) top left repeat;
+      z-index: 0;
+      opacity: 0.2;
+      border-right: 1px dashed #32aea3;
+   }
+   #docs aside {
+      float: left;
+      width: 25%;
+      position: relative;
+      z-index: 9999;
+   }
+   #docs aside h3 {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-top: 0;
+   }
+   #docs aside nav ul {
+      padding-bottom: 1.5em;
+   }
+   #docs aside nav ul li {
+      font-size: .9em;
+   }
+   #docs #article-wrap {
+      float: right;
+      width: 75%;
+   }
+   #docs article {
+      padding: 0 1em;
    }
 }
 
 @media only screen and (min-width: 960px) {
+   #main-nav ul {
+      margin-top: .3em;
+   }
    #main-nav ul li a {
-      margin-left: 2em;
+      font-size: 1.8em;
+      margin-left: 1em;
    }
 }
 
@@ -363,6 +645,12 @@ body {
    .vessel {
       margin: 0 auto;
       width: 960px;
+   }
+   .content {
+      margin-top: 1em;
+   }
+   .content .vessel {
+      border: 1px solid #52cec3;
    }
 }
 

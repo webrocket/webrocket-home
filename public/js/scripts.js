@@ -5,6 +5,6 @@ $(document).ready(function() {
     $('#toggle-menu').on('click', function() {
         $nav.slideToggle();
         isNavVisible = !isNavVisible;
-        $(this).html((isNavVisible ? '&#9652;' : '&#9662;') + ' Menu');
+        $(this).html('<small>' + (isNavVisible ? '&#9652;' : '&#9662;') + '</small> Menu');
     });
 });
