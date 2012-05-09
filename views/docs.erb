@@ -1,0 +1,25 @@
+<section id="docs" class="content">
+  <div class="vessel">
+    <div id="nav-bg"></div>
+    
+    <aside>
+      <nav id="docs-nav">
+        <% $docs.sections.each do |section| %>
+          <h3><%= section.title %></h3>
+          <ul>
+            <% section.each do |page| %>
+              <li><a href="/docs/<%= page.slug %>/"><%= page.title %></a></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </nav>
+    </aside>
+
+    <div id="article-wrap">
+      <article id="docs-content">
+        <%= @content %>
+      </article>
+    </div>                 
+    <div class="clearfix"></div>
+  </div>
+</section>

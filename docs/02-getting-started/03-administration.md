@@ -1,0 +1,4 @@
+Administration basics
+---
+
+## Administration basics

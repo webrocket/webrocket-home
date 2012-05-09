@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>WebRocket - Distributed Web Broker for masses!</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="/css/webfonts.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<script src="/js/libs/modernizr-2.5.3.min.js"></script>
+  </head>
+  <body class='<%= @page %> <%= @classes %>'>
+    <div id="header-wrap">
+      <header id="header">
+        <div class="vessel">
+          <nav id="main-nav">
+            <ul>
+              <li class="download-link"><a href="/download/">Download</a></li>
+              <li class="docs-link"><a href="/docs/">Docs</a></li>
+              <li class="faq-link"><a href="/faq/">FAQ</a></li>
+              <li class="demos-link"><a href="#">Demos</a></li>
+              <li class="cloud-link"><a href="#">Our cloud</a></li>
+            </ul>
+          </nav>
+          <a href="#" id="toggle-menu"><small>&#9662;</small> Menu</a>
+          <h1 id="logo">
+            <a href="/">WebRocket</a>
+            <% if @section %>
+              <span class="section">:<%= @section %></span>
+            <% end %>
+          </h1> 
+        </div>
+      </header>
+    </div>
+
+    <div role="main">
+      <%= yield %>
+      <div class="trans"></div>
+    </div>
+
+    <div id="footer-wrap">
+      <footer role="contentinfo">
+        <div class="vessel">
+          <nav id="foot-nav">
+            <ul>
+              <li class="tour-related"><a href="http://tour.webrocket.io/#1">Tour</a></li>
+              <li><a href="/docs/">Docs</a></li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li><a href="/code/">Code</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Crew</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <p class="copy">
+            Copyright &copy; 2011 by <a href="http://nu7hat.ch">nu7</a>
+            and folks at <a href="http://cuboxlabs.com">Cubox</a>.<br/>
+            <small>All rights reserved.</small>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/js/libs/jquery-1.7.2.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+  </body>
+</html>
