@@ -119,7 +119,16 @@ $pages = {
     :section => 'Docs',
     :classes => ['white'],
   },
+  'crew' => {
+    :section => 'Crew',
+    :classes => ['white'],
+  },
+  'support' => {
+    :section => 'Support',
+    :classes => ['white'],
+  }
 }
+
 $latest_server_version = WEBROCKET_VERSION
 $docs = Docs.load
 

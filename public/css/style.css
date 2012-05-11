@@ -416,6 +416,7 @@ body {
    color: #fff;
 }
 
+
 /* =============================================================================
    Pages related content
    ========================================================================== */
@@ -451,7 +452,8 @@ body #logo .section {
 
 body.docs .docs-link a,
 body.faq .faq-link a,
-body.download .download-link a {
+body.download .download-link a,
+body.crew .crew-link a {
    color: #72eee3 !important;
 }
 
@@ -474,6 +476,25 @@ body.download .download-link a {
    font-size: .9em;
    margin-top: .2em;
    margin-bottom: 1.5em;
+}
+#crew-content article a.twitter {
+   margin-top: -2em;
+   font-size: .8em;
+   position: absolute;
+}
+#crew-content article {
+   position: relative;
+}
+#crew-content article header {
+   float: left;
+   margin-top: 4em;
+}
+#crew-content article p {
+   clear: both;
+}
+#crew-content article img {
+   position: absolute;
+   right: 0px;
 }
 
 .nobullets {
@@ -583,7 +604,6 @@ body.download .download-link a {
    [role='contentinfo'] {
       box-shadow: inset 0 50px 50px #0c0c0c;
       background: #0c0c0c url(/img/cartographer.png) repeat;
-      padding-bottom: 0;
    }
    [role='contentinfo'] .vessel {
       background: url(/img/footer.png) top center no-repeat;
@@ -654,6 +674,7 @@ body.download .download-link a {
    #twitter_updates {
       overflow: hidden;
       height: 380px;
+      margin-bottom: -3em;
    }
    #twitter_updates .timeline {
       display: block;
@@ -702,6 +723,18 @@ body.download .download-link a {
       border-left-color: #1a1a1a;
       float: right;
       margin-right: -25px;
+   }
+   #crew-content article {
+      padding-left: 200px;
+   }
+   #crew-content article img {
+      position: absolute;
+      float: none;
+      left: 0px;
+   }
+   #crew-content article header {
+      float: none;
+      margin-top: 0;
    }
 }
 
