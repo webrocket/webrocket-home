@@ -28,6 +28,14 @@ $pages = {
     :section => 'Docs',
     :classes => ['white'],
   },
+  'demos' => {
+    :section => 'Demos',
+    :classes => ['white'],
+  },
+  'contact' => {
+    :section => 'Contact',
+    :classes => ['white'],
+  },  
   'crew' => {
     :section => 'Crew',
     :classes => ['white'],
@@ -35,7 +43,11 @@ $pages = {
   'support' => {
     :section => 'Support',
     :classes => ['white'],
-  }
+  },
+  'terms' => {
+    :section => 'TOS',
+    :classes => ['white'],
+  },
 }
 
 $latest_server_version = WEBROCKET_VERSION

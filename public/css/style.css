@@ -93,6 +93,7 @@ body {
    display: block;
 }
 #header-wrap {
+   z-index: 88888;
    box-shadow: 0 1px 7px rgba(0,0,0,.8);
    border-bottom: 1px dashed #333;
    border-top: 1px dashed #333;
@@ -416,6 +417,91 @@ body {
    color: #fff;
 }
 
+#octo-peek {
+   position: absolute;
+   width: 256px;
+   height: 200px;
+   top: 0;
+   right: 0;
+   overflow: hidden;
+}
+#octo-peek a {
+   display: block;
+   width: 86px;
+   height: 88px;
+   padding: 5px;
+   position: absolute;
+   right: -37px;
+   top: 58px;
+   background-image: url('/img/octocat-peak.png');
+   background-repeat: no-repeat;
+   background-position: 5px 5px;
+   z-index: 77777;
+   -webkit-transition: top ease-out .2s, right ease-out .2s;
+      -moz-transition: top ease-out .2s, right ease-out .2s;
+       -ms-transition: top ease-out .2s, right ease-out .2s;
+        -o-transition: top ease-out .2s, right ease-out .2s;
+           transition: top ease-out .2s, right ease-out .2s;
+}
+#octo-peek.small a {
+   right: -77px;
+   top: -46px;
+}
+#octo-peek a:hover,
+#octo-peek.small a:hover {
+   top: 78px;
+   right: -15px;
+}
+#octo-peek a span:after {
+   content: "";
+   border-style: dashed;
+   border-color: transparent;
+   border-width: 0.53em;
+   display: -moz-inline-box;
+   display: inline-block;
+   font-size: 8px;
+   height: 0;
+   line-height: 0;
+   position: relative;
+   vertical-align: middle;
+   width: 0;
+   border-left-width: 1em;
+   border-left-style: solid;
+   border-left-color: #FFF;
+   float: right;
+   margin-right: -17px;
+   margin-top: 3px;
+}
+#octo-peek a span {
+   position: absolute;
+   top: 28px;
+   left: -158px;
+   width: 147px;
+   line-height: 20px;
+   font-size: 14px;
+   padding: 2px 5px;
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+   font-weight: bold;
+   color: #333;
+   border-radius: 2px;
+   background-color: #FFF;
+   box-shadow: -1px 1px 0px rgba(0,0,0,.3);
+   opacity: 0;
+   -webkit-transition: opacity ease-out .2s;
+      -moz-transition: opacity ease-out .2s;
+       -ms-transition: opacity ease-out .2s;
+        -o-transition: opacity ease-out .2s;
+           transition: opacity ease-out .2s;
+}
+#octo-peek a:hover span {
+   opacity: 1;
+}
+
+#octo-peek {
+   display: none;
+}
+
 
 /* =============================================================================
    Pages related content
@@ -514,6 +600,7 @@ body.crew .crew-link a {
    float: right;
 }
 
+
 /* =============================================================================
    Media Queries
    ========================================================================== */
@@ -559,6 +646,9 @@ body.crew .crew-link a {
    #foot-nav li a:hover {
       background: none;
       text-decoration: underline;
+   }
+   body.index #octo-peek {
+      display: inline;
    }
 }
 
