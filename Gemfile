@@ -4,7 +4,7 @@ source :rubygems
 gem 'rack'
 gem 'thin'
 gem 'sinatra'
-gem 'redcarpet'
+gem 'rdiscount'
 
 group :development do
   gem 'foreman'

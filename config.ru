@@ -1,6 +1,7 @@
 # -*- ruby -*-
 $LOAD_PATH.unshift(File.expand_path('../lib/', __FILE__))
 require 'sinatra'
+require 'rdiscount'
 require 'webrocket/docs'
 
 RACK_ENV = ENV['RACK_ENV'] || 'development'
@@ -66,12 +67,23 @@ get '/' do
   erb :index
 end
 
+get '/docs/' do
+  @page = 'docs'
+  @content = markdown(:docs_index, :layout => false)
+
+  setup_page_info!
+  @classes << ' docs-index'
+
+  erb :docs
+end
+
 get '/docs/*' do
   @page = 'docs'
 
   $docs = WebRocket::Docs.load if RACK_ENV.to_s != 'production'
   slug = params[:splat].join('/').gsub(/\/$/, '')
-  @content = markdown $docs[slug].to_s unless slug.empty?
+  doc = $docs[slug] or pass
+  @content = markdown doc.to_s
   
   setup_page_info!
   erb :docs

@@ -1,4 +1,0 @@
-Errors handling
----
-
-## Errors handling

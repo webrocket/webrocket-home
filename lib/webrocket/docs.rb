@@ -30,7 +30,7 @@ module WebRocket
       def self.load(path)
         lines = File.read(File.join(DOCS_PATH, path)).split(/$/)
         title, _ = *lines.shift(2)
-        content = lines.join("\n")
+        content = lines.join
         new(title, content, path)
       end
 

@@ -95,8 +95,8 @@ body {
 #header-wrap {
    z-index: 88888;
    box-shadow: 0 1px 7px rgba(0,0,0,.8);
-   border-bottom: 1px dashed #333;
-   border-top: 1px dashed #333;
+   border-top: 1px dashed #555;
+   border-bottom: 1px dashed #555;
    margin-top: 10px;
    background: #0d0d0d url(/img/classy_fabric.png) top left repeat;
    padding: 1px 0;
@@ -312,6 +312,16 @@ body {
    font-weight: normal;
    line-height: 1em;
 }
+.content h4 {
+   font-family: Oyster;
+   font-size: 1.4em;
+   font-weight: bold;
+   margin-top: 1.5em;
+}
+.content h5 {
+   font-weight: bold;
+   font-size: 1em;
+}
 .content p {
    color: #555;
 }
@@ -385,6 +395,28 @@ body {
    position: relative;
    margin-top: 40px;
    height: auto;
+}
+#twitter_updates h3 {
+   margin: 0;
+   padding: 0;
+   padding-bottom: .5em;
+   font-family: Oyster;
+   font-size: 2em;
+   font-weight: normal;
+   padding-left: 40px;
+   line-height: 30px;
+   background: url(/img/twitter-icon.png) top left no-repeat;
+   background-size: 30px 30px;
+   display: inline-block;
+   margin: 0 auto;
+}
+#twitter_updates h3 a {
+   color: #CCC;
+   text-decoration:underline;
+}
+#twitter_updates h3 a:hover {
+   color: #72eee3;
+   text-decoration: none;
 }
 #twitter_updates .timeline {
    display: none;
@@ -502,7 +534,6 @@ body {
    display: none;
 }
 
-
 /* =============================================================================
    Pages related content
    ========================================================================== */
@@ -581,6 +612,43 @@ body.crew .crew-link a {
 #crew-content article img {
    position: absolute;
    right: 0px;
+}
+
+#docs article p code {
+   background: #f2fffc;
+   color: #027378;
+   padding: 2px;
+   font-family: "Ubuntu Mono", "Bitstream Vera Sans Mono", Monospace, Courier;
+}
+#docs article pre {
+   padding: .8em 1.2em;
+   background: #1a1a1a;
+   color: #72eee3;
+   padding: .4em .8em;
+   -moz-border-radius: 2px;
+}
+#docs article pre code {
+   font-family: "Ubuntu Mono", "Bitstream Vera Sans Mono", Monospace, Courier;
+}
+#docs blockquote {
+   font-style: italic;
+   color: #444;
+   text-shadow: 1px 1px 0 rgba(255,255,255,.8);
+   background: url(/img/grunge_wall.png) top left repeat-x;
+   margin: 0;
+   padding: .8em 1.2em;
+   -moz-border-radius: 2px;
+}
+.docs-index #docs article ul {
+   font-size: 1.3em;
+   list-style-type: none;
+   padding: 0;
+   margin: 1.5em 0;
+   border-top: 1px dashed #DDD;
+}
+.docs-index #docs article ul li {
+   padding: .4em 0;
+   border-bottom: 1px dashed #DDD;
 }
 
 .nobullets {
@@ -759,12 +827,16 @@ body.crew .crew-link a {
       width: 75%;
    }
    #docs article {
-      padding: 0 1em;
+      padding: 0 0 0 1em;
    }
    #twitter_updates {
       overflow: hidden;
       height: 380px;
       margin-bottom: -3em;
+   }
+   #twitter_updates h3 {
+      position: absolute;
+      margin-left: -15px;
    }
    #twitter_updates .timeline {
       display: block;
@@ -775,7 +847,7 @@ body.crew .crew-link a {
    }
    #twitter_update_list {
       position: absolute;
-      top: 50px;
+      top: 70px;
    }
    #twitter_update_list li {
       margin: -2.5em 0;
