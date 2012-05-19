@@ -570,6 +570,7 @@ body #logo .section {
 body.docs .docs-link a,
 body.faq .faq-link a,
 body.download .download-link a,
+body.demos .demos-link a,
 body.crew .crew-link a {
    color: #72eee3 !important;
 }
