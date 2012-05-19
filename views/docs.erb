@@ -5,14 +5,17 @@
     <aside>
       <nav id="docs-nav">
         <% $docs.sections.each do |section| %>
-          <h3><%= section.title %></h3>
-          <ul>
-            <% section.each do |page| %>
-              <li><a href="/docs/<%= page.slug %>/"><%= page.title %></a></li>
-            <% end %>
-          </ul>
+          <div class="section">
+            <h3><%= section.title %></h3>
+            <ul>
+              <% section.each do |page| %>
+                <li><a href="/docs/<%= page.slug %>/"><%= page.title %></a></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
       </nav>
+      <div class="clearfix"></div>
     </aside>
 
     <div id="article-wrap">

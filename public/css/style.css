@@ -628,6 +628,9 @@ body.crew .crew-link a {
    padding: .4em .8em;
    -moz-border-radius: 2px;
 }
+#docs aside {
+   margin-bottom: 4em;
+}
 #docs article pre code {
    font-family: "Ubuntu Mono", "Bitstream Vera Sans Mono", Monospace, Courier;
 }
@@ -807,6 +810,8 @@ body.crew .crew-link a {
       border-right: 1px dashed #32aea3;
    }
    #docs aside {
+      background: transparent;
+      margin-bottom: 0;
       float: left;
       width: 25%;
       position: relative;
