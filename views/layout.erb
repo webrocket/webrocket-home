@@ -38,16 +38,44 @@
           <a href="#" id="toggle-menu"><small>&#9662;</small> Menu</a>
           <h1 id="logo">
             <a href="/">WebRocket</a>
-            <% if @section %>
-              <span class="section">:<%= @section %></span>
-            <% end %>
           </h1> 
         </div>
       </header>
     </div>
 
     <div role="main">
+      <div id="head">
+        <section id="banner">
+          <div class="vessel">
+            <% if @page == 'index' %>
+              <div id="banner-text">
+                <h2 class="slogan">Open source, robust and bi-directional Web broker</h2>
+                <p class="tagline">
+                  Build real-time, WebSockets powered applications with no fuss!
+                  Now everyone can build real-time apps.
+                </p>
+                <div class="take-a-tour tour-related">
+                  <a href="http://tour.webrocket.io/#1">Take a 10-minutes long tour</a>
+                  <p>Go through our interactive tutorial and discover the power
+                    of WebRocket! You're gonna love it... &#9829;</p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            <% else %>
+              <h2><%= @section %></h2>
+            <% end %>
+          </div>
+        </section>
+
+        <section id="clouds">
+          <div class="first"></div>
+          <div class="second"></div>
+          <div class="third"></div>
+        </section>
+      </div>
+      
       <%= yield %>
+      
       <div class="trans"></div>
     </div>
 
@@ -85,10 +113,6 @@
       </footer>
     </div>
 
-    <div id='octo-peek'>
-      <a href='https://github.com/webrocket/webrocket/' rel='external'><span>Fork me on Github!</span></a>
-    </div>
-    
     <script src="/js/libs/jquery-1.7.2.min.js"></script>
     <script src="/js/scripts.js"></script>
 

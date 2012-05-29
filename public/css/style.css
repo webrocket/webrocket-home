@@ -94,13 +94,9 @@ body {
 }
 #header-wrap {
    z-index: 88888;
-   box-shadow: 0 1px 7px rgba(0,0,0,.8);
-   border-top: 1px dashed #555;
-   border-bottom: 1px dashed #555;
-   margin-top: 10px;
-   background: #0d0d0d url(/img/classy_fabric.png) top left repeat;
+   background: transparent url(/img/trans-nav.png) bottom center repeat-x;
    padding: 1px 0;
-   padding-bottom: .4em;
+   padding-bottom: 2em;
    position: relative;
 }
 #logo {
@@ -125,11 +121,17 @@ body {
    outline: none;
 }
 
+#main-nav {
+   background: #040404;
+   display: block;
+   margin: -1em;
+   padding: 1em;
+}
 #main-nav ul {
    list-style-type: none;
    margin: 1.1em 0 1.6em 0;
    text-align: center;
-   border-bottom: solid 1px #1a1a1a;
+   border-bottom: solid 1px #0C0C0C;
    border-top: solid 1px #000;
    display: none;
    z-index: 9999;
@@ -146,7 +148,7 @@ body {
    color: #AAA;
    font-size: 1.5em;
    font-family: Oyster;
-   border-top: solid 1px #1a1a1a;
+   border-top: solid 1px #0C0C0C;
    border-bottom: solid 1px #000;
    text-shadow: -1px -1px 0 rgba(0,0,0,.5);
 }
@@ -288,13 +290,21 @@ body {
    text-decoration: none;
    color: #FFF;
 }
+[role='contentinfo'] .mountains {
+   margin-top: -60px;
+   padding-top: 110px;
+   position: relative;
+   z-index: 9999;
+   background: url(/img/mountains.png) center 20px repeat-x;
+   background-size: 733px 69px;
+}
 
 .content {
-   margin-top: -18px;
    padding-top: 1.5em;
 }
 .content .vessel {
    padding: 1.5em;
+   padding-bottom: 3em;
    background: #FFF url(/img/ice_age.png) top left repeat;
 }
 .content h2 {
@@ -538,21 +548,54 @@ body {
    Pages related content
    ========================================================================== */
 
-body.white {
-   background: #62ded3 url(/img/green_dust_scratch.png) repeat;
+body.white [role='main'] .content {
+   padding: 1.5em 0 4em 0;
+   margin: -1em 0 0 0;
+   background: #52cec3 url(/img/green_dust_scratch.png) repeat;
 }
 body.white [role='main'] .trans {
    height: 5px;
+   margin-top: -80px;
+   position: relative;
+   z-index: 9999;
 }
 body.white #header-wrap {
    box-shadow: none;
    border: 0;
-   padding: 5px 0;
-   margin-top: 5px;
 }
 body.white #header {
-   border-top: 1px dashed #555;
-   border-bottom: 1px dashed #555;
+}
+body.white #banner h2 {
+   font-size: 5.5em;
+   margin: 0;
+   padding: 0;
+   text-align: left;
+   margin-top: -20px;
+   margin-bottom: -40px;
+   color: #FFF;
+   text-shadow: 3px 3px 0px rgba(0,0,0,.8);
+   font-family: Oyster;
+   font-weight: normal;
+}
+body.white #banner .vessel {
+   background: transparent url(/img/stars-bg.png) repeat;
+}
+body.white #clouds {
+   height: 80px;
+}
+body.white #clouds .first {
+   display: none;
+}
+body.white #clouds .second {
+   background-position: center 10px;
+}
+body.white #clouds .third {
+   background-image: url(/img/trans-white.png);
+   background-position: left 20px
+}
+.content .vessel {
+   margin-top: -35px;
+   padding-top: 0;
 }
 
 body #logo .section {
@@ -578,6 +621,7 @@ body.crew .crew-link a {
 #faq ul {
    margin: 0;
    padding: 0;
+   margin-top: -1em;
    list-style-type: none;
 }
 
@@ -725,6 +769,13 @@ body.crew .crew-link a {
 }
 
 @media only screen and (min-width: 720px) {
+   .content .vessel {
+      margin-top: 0;
+      padding-top: 1em;
+   }
+   body.white #clouds .third {
+      background-image: url(/img/trans-0.png);
+   }
    #banner .vessel {
       background: url(/img/illustration.png) left 60px no-repeat;
    }
@@ -774,6 +825,8 @@ body.crew .crew-link a {
       margin-top: -145px;
    }
    [role='contentinfo'] .mountains {
+      margin-top: 0;
+      padding-top: 0;
       background: url(/img/mountains.png) center 70px repeat-x;
       background-size: 733px 69px;
    }
@@ -782,6 +835,7 @@ body.crew .crew-link a {
    }
    .content .vessel {
       box-shadow: 5px 5px 0 rgba(255,255,255,.5);
+      padding-bottom: 1.5em;
    }
    body.white [role='main'] .trans {
       height: 80px;
@@ -797,6 +851,7 @@ body.crew .crew-link a {
    }
    #docs {
       position: relative;
+      z-index: 0;
    }
    #docs #nav-bg {
       position: absolute;

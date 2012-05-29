@@ -14,7 +14,7 @@ set :views, File.join(ROOT_PATH, 'views');
 
 $pages = {
   'faq' => {
-    :section => 'FAQ',
+    :section => 'Frequently Asked Questions',
     :classes => ['white'],
   },
   'download' => {
@@ -22,11 +22,11 @@ $pages = {
     :classes => ['white'],
   },
   'code' => {
-    :section => 'Code',
+    :section => 'Get the code',
     :classes => ['white'],
   },
   'docs' => {
-    :section => 'Docs',
+    :section => 'Documentation',
     :classes => ['white'],
   },
   'demos' => {
@@ -34,19 +34,19 @@ $pages = {
     :classes => ['white'],
   },
   'contact' => {
-    :section => 'Contact',
+    :section => 'Get in touch',
     :classes => ['white'],
   },  
   'crew' => {
-    :section => 'Crew',
+    :section => 'Our awesome crew',
     :classes => ['white'],
   },
   'support' => {
-    :section => 'Support',
+    :section => 'Commercial support',
     :classes => ['white'],
   },
   'terms' => {
-    :section => 'TOS',
+    :section => 'Terms of Service',
     :classes => ['white'],
   },
 }
