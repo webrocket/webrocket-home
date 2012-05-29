@@ -2,6 +2,8 @@
 $LOAD_PATH.unshift(File.expand_path('../lib/', __FILE__))
 require 'sinatra'
 require 'rdiscount'
+require 'json'
+require 'redis'
 require 'webrocket/docs'
 
 RACK_ENV = ENV['RACK_ENV'] || 'development'
@@ -11,6 +13,13 @@ WEBROCKET_VERSION = ENV['WEBROCKET_VERSION']
 
 set :public_folder, File.join(ROOT_PATH, 'public');
 set :views, File.join(ROOT_PATH, 'views');
+
+$redis = if ENV['REDISTOGO_URL'].to_s == ""
+  Redis.new
+else
+  uri = URI.parse(ENV["REDISTOGO_URL"])
+  Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+end
 
 $pages = {
   'faq' => {
@@ -49,6 +58,10 @@ $pages = {
     :section => 'Terms of Service',
     :classes => ['white'],
   },
+  'cloud' => {
+    :section => 'WebRocket in the cloud',
+    :classes => ['landing'],
+  }
 }
 
 $latest_server_version = WEBROCKET_VERSION
@@ -60,6 +73,22 @@ helpers do
     @section = info[:section]
     @classes = info[:classes].to_a.join
   end
+end
+
+VALID_EMAIL = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+
+post "/signup" do
+  content_type "application/json"
+  email = params[:signup_email]
+
+  error = if email =~ VALID_EMAIL
+    $redis.hset(:subscribers, email, true)
+    nil
+  else 
+    "This is not valid email address!"
+  end
+
+  { "error" => error }.to_json
 end
 
 get '/' do
@@ -88,6 +117,14 @@ get '/docs/*' do
   setup_page_info!
   erb :docs
 end
+
+get '/cloud/' do
+  @page = 'cloud'
+
+  setup_page_info!
+  erb(:cloud, :layout => false)
+end
+
 
 get '/*/' do
   path  = params[:splat]
