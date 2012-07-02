@@ -618,6 +618,15 @@ body.crew .crew-link a {
    color: #72eee3 !important;
 }
 
+#demos-content img {
+   float: right;
+   display: inline;
+}
+
+#demos-yodachat {
+  height: 350px;
+}
+
 #faq ul {
    margin: 0;
    padding: 0;
