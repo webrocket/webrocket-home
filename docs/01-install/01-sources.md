@@ -1,4 +1,4 @@
-Any Unix (from sources)
+Any Unix (from source)
 ---
 
 ## Installing from sources
